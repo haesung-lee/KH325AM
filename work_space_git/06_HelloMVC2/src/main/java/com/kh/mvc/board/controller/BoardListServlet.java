@@ -1,6 +1,7 @@
 package com.kh.mvc.board.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,8 +31,12 @@ public class BoardListServlet extends HttpServlet {
 		PageInfo pageInfo = null;
 		List<Board> list = null;
 		Map<String, String> searchMap = new HashMap<>();
+		List<String> stringList = new ArrayList();
 		
 		try {
+			stringList.add("최길동");
+			stringList.add("박길동");
+			stringList.add("길길동");
 			String searchValue = req.getParameter("searchValue");
 			if(searchValue != null && searchValue.length() > 0) {
 				String searchType = req.getParameter("searchType");
