@@ -20,11 +20,13 @@ public class BoardListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private BoardService service = new BoardService();
+	private BoardService service2 = new BoardService();
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int page = 1;
 		int boardCount = 0;
+		int boardCount222 = 0;
 		PageInfo pageInfo = null;
 		List<Board> list = null;
 		Map<String, String> searchMap = new HashMap<>();
