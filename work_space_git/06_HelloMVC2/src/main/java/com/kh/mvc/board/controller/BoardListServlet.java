@@ -29,9 +29,13 @@ public class BoardListServlet extends HttpServlet {
 		int boardCount222 = 0;
 		PageInfo pageInfo = null;
 		List<Board> list = null;
+		String[] array = new String[10];
 		Map<String, String> searchMap = new HashMap<>();
 		
 		try {
+			array[0] = "홍길동";
+			array[1] = "홍길동";
+			array[2] = "홍길동";
 			String searchValue = req.getParameter("searchValue");
 			if(searchValue != null && searchValue.length() > 0) {
 				String searchType = req.getParameter("searchType");
